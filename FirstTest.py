@@ -3,16 +3,29 @@
 
 def optionExecutor(userInput):
 
-    if isnumeric(userInput):
-        
+    print(type(userInput))
+    
+    try:
+        userInput = (int(userInput))
+        if (userInput):
+            print("is Numeric")
+        else:
+            print("In Correct Value")
+            return
+    except:
+        print("Value is not numeric")
    
-    if(userInput==1):
+    if userInput==1:
         print("Enter the numbers to add")
-    elif (userInput==2):
+    elif userInput==2:
         print("Enter the numbers to subtract")
     elif userInput == 6 :
         print("Exiting")
         exit()
+
+
+def clearTerminal():
+    print("\n\n\n\n\n\\n\n\n\n*******************************************")
 
 while True:
     print("Please Select one of the follwing options")
@@ -23,10 +36,7 @@ while True:
     print("5. Modulo numbers")
     print("6. Modulo numbers")
 
-    userInput = input()
-
-    print(userInput)
-
+    userInput = input();
     optionExecutor(userInput)
 
     
